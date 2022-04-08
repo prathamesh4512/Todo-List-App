@@ -1,0 +1,163 @@
+/* Overriding default style */
+body{
+    margin:0;
+    /* height: 100vh; */
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+/* Main Todo List App Container */
+#container{
+    margin:25px auto;
+    height: 90vh;
+    width:400px;
+    border: 2px solid #808080;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: lightyellow; 
+    overflow: hidden;
+}
+
+/* Todo List App Heading */
+h1{
+    text-align: center;
+}
+
+/* Horizontal separator */
+hr{
+    height: 5px;
+    background-color: black;
+}
+
+/* Add Task div */
+#add-task{
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap:5px;
+    align-items: center;
+}
+
+/* Add-Task-Input */
+#add-task>input{
+    width:100%;
+    padding:10px 10px;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+}
+
+/* Removing outline of input on focus */
+#add-task>input:focus{
+    outline: none;
+    background-color: rgb(0,0,0,0.2);
+}
+
+
+/* Animation for Add-Task-icon */
+@keyframes add-animation {
+    50%{
+        transform: scale(1.2);
+    }
+}
+
+/* Add-Task-icon */
+#add-task>i{
+    font-size:25px ;
+    color:green;
+    cursor: pointer;
+    
+}
+
+#add-task>i:hover{
+    animation: add-animation 1s ease-in-out;
+}
+
+/* Total-Task count */
+#total-task,#count{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Whole Task-List */
+#task-list{
+    list-style: none;
+    padding:0;
+    margin: 0;
+    height: 60%;
+    overflow: scroll;
+}
+
+#task-list::-webkit-scrollbar{
+    display: none;
+}
+
+/* Each Task item */
+#task-list>li{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 7px;
+    align-items: baseline;
+    border-bottom: 2px solid black;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+/* changing background of task on hovering */
+#task-list>li:hover{
+    background-color: rgb(0,0,0,0.2);
+}
+
+/* Text of the Task */
+#task-list>li>p{
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    display: inline-block;
+}
+
+/* On checking check icon adding line-through on text of the task */
+.line-through{
+    text-decoration: line-through;
+}
+
+/* Icons of the Task */
+#task-list>li>i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Changing color of check icon after checking */
+#task-list>li>i.fa-check-square{
+    color: green;
+}
+
+/* Animation for delete-icon of the task */
+@keyframes delete-animation {
+    25%{
+        transform: rotate(-15deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(15deg);
+    }
+}
+
+/* Changing color & adding animation to delete icon on hover/focus */
+#task-list>li>i.del:is(:hover,:focus){
+    color:red;
+    animation: delete-animation 0.5s ease-in-out 2 ;
+}
+

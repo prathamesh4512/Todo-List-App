@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!------------------- Fontawesome Link --------------->
+    <script src="https://kit.fontawesome.com/dda61a1448.js" crossorigin="anonymous"></script>
+
+    <!-- Css File Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Todo List</title>
+</head>
+<body>
+    <!-- Main Todo List App Container -->
+    <div id="container">
+        <!-- Todo List App Heading -->
+        <h1>Todo List App</h1>
+
+        <!-- Horizontal separator -->
+        <hr>
+
+        <!-- Add Task Section -->
+        <div id="add-task">
+            <!--------- Add Icon --------->
+            <i class="fa-solid fa-square-plus"></i>
+            <!--------- Task Input ------->
+            <input type="text" placeholder="Add-task">
+        </div>
+
+        <!-- Horizontal separator -->
+        <hr>
+        
+        <!------------ Total Task Count Section ---------->
+        <p id="total-task">Total Tasks: <span id="count">0</span></p>
+        
+        <!-- Task List Section -->
+        <ul id="task-list">
+
+             <!-- <li class="task">
+                <i class="fa-solid fa-check-square"></i>
+                <span class="line-through">Hello world</span>
+                <i class="fa-solid fa-trash-can"></i>
+             </li> -->
+
+        </ul>
+        
+        <script src="script.js"></script>
+    </div>
+    
+</body>
+</html>
