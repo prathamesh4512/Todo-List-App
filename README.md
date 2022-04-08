@@ -4,7 +4,7 @@ A simple Todo List App created using HTML,CSS & Javascript.
 
 # Deployed
 
-Link -> 
+Link -> https://prathamesh4512.github.io/Todo-List-App/
 
 # Screenshots
 ![image](https://user-images.githubusercontent.com/87566298/162444835-622fbb1b-2a9d-46e7-841a-510ed1ea7adc.png)
