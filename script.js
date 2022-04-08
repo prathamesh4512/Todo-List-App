@@ -13,6 +13,7 @@ const uncheckb = "fa-square"
 const input = document.querySelector("#add-task>input");
 const count = document.getElementById("count");
 const taskList = document.getElementById("task-list");
+const addIcon = document.querySelector("#add-task>i");
 
 // Variables
 let list=[],id=0;
@@ -41,7 +42,7 @@ function loadTasks(list){
 }
 
 
-document.querySelector("#add-task>i").addEventListener("click", handleAdd);
+addIcon.addEventListener("click", handleAdd);
 
 function handleAdd(){
     let data = input.value;
